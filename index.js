@@ -1,8 +1,10 @@
 let express = require('express');
-let app = express();
+
 let tareasRoutes = require('./routes/tareas');
 
+let app = express();
 
+app.use(express.json())
 app.use('/tareas', tareasRoutes);
 
 app.listen(3000,()=>{
